@@ -10,7 +10,7 @@ app.use((req, res, next) => {
   next()
 })
 app.use(cors({
-  origin:"https://second-server.vercel.app",
+  origin:"https://client-two-eta-37.vercel.app",
   credentials:true
 }))
 app.use(express.json())
@@ -25,5 +25,4 @@ app.get("/",(req,res)=>{
   app.use("/create",getCreate)
   app.use("/product",product)
   app.use("/test",test)
-
 module.exports = app

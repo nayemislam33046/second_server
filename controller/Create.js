@@ -1,5 +1,4 @@
 const db = require("../connection/db")
-
 const getCreate = (req,res)=>{
     const sql = "INSERT INTO table_test (`name`,`age`) VALUES (?,?)"
     const values = [
