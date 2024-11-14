@@ -5,7 +5,10 @@ const test = require("./routes/Test")
 const db = require("./connection/db")
 const getCreate = require("./routes/Create")
 const app = express() 
-
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Credentials", true)
+  next()
+})
 app.use(cors({
   origin:"https://second-server.vercel.app",
   credentials:true
