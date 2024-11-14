@@ -1,10 +1,16 @@
 const express = require("express")
+const cors = require("cors")
 const product = require("./routes/Products")
 const test = require("./routes/Test")
 const db = require("./connection/db")
 const getCreate = require("./routes/Create")
 const app = express()
 
+app.use(cors({
+  origin:"http://localhost:5173",
+  methods:["get","post"],
+  credentials:true
+}))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
