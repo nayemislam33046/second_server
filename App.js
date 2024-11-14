@@ -11,6 +11,7 @@ app.use((req, res, next) => {
 })
 app.use(cors({
   origin:"https://client-two-eta-37.vercel.app",
+  methods:["GET","POST"],
   credentials:true
 }))
 app.use(express.json())
