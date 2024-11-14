@@ -15,7 +15,6 @@ app.use(cors({
 }))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-
 app.get("/",(req,res)=>{
     const sql = "SELECT * FROM table_test"
     db.query(sql,(err,data)=>{
